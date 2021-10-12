@@ -1,7 +1,6 @@
 package main
 
 import (
-	"chet/tools"
 	"fmt"
 	"net"
 	"time"
@@ -129,8 +128,7 @@ func HandleConnect(conn net.Conn) {
 			if buf2[0] != 10 && string(buf2[:n]) != "who\n" {
 				if len(string(buf2[:n])) <= 7 || string(buf2[:n])[:7] != "rename|" {
 					msg = append([]byte("💬["+thisUser+"]对大家说:"), buf2[:n]...)
-					messageSend := thisUser + " said " + string(buf2[:n])
-					tools.SendToQiyeWx(messageSend)
+
 				}
 
 			} else {
