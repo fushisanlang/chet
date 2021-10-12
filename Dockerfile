@@ -1,6 +1,6 @@
 FROM ubuntu:20.04 
-WORKDIR /chet
+WORKDIR /server
 COPY server ./
 RUN chmod +x server
 EXPOSE 50002
-CMD ["/chet/server"]
+CMD ["/server/server"]
