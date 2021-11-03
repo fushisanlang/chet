@@ -8,7 +8,7 @@ import (
 
 func main() {
 	fmt.Println("正在连接服务器……")
-	conn, err := net.Dial("tcp", "127.0.0.1:50002")
+	conn, err := net.Dial("tcp", "fushisanlang.cn:50002")
 	if err != nil {
 		fmt.Println("net.Dial error:", err)
 		return
